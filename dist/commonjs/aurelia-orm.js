@@ -513,6 +513,10 @@ var Entity = exports.Entity = (_dec3 = (0, _aureliaDependencyInjection.transient
   };
 
   Entity.prototype.isNew = function isNew() {
+    var id = this.getId();
+    if (id !== undefined && id !== null && id === '00000000-0000-0000-0000-000000000000') {
+      return true;
+    }
     return !this.getId();
   };
 
